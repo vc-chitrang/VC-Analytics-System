@@ -19,29 +19,35 @@ public class AnalyticsEvent {
 public class AnalyticsManager : MonoBehaviour {
 	private static AnalyticsManager _instance;
 	public static AnalyticsManager Instance => _instance;
-	private string offlineStoragePath;
+	private string offlineStoragePath { get => Path.Combine(Application.persistentDataPath, "AnalyticsData.json"); }
+	private Dictionary<string,AnalyticsEvent> _analysisDataDict = new Dictionary<string, AnalyticsEvent>();
 
 	private void Awake() {
+		Singletone();
+	}
+
+	private void Singletone() {
 		if (_instance != null && _instance != this) {
 			Destroy(this.gameObject);
 			return;
 		}
 		_instance = this;
 		DontDestroyOnLoad(this.gameObject);
-		Initialize();
 	}
-
-	// Initialize any required analytics data
-	public void Initialize() {
-		// Load or set up default values, user identifiers, etc.
-		offlineStoragePath = Path.Combine(Application.persistentDataPath, "AnalyticsData.json");
-	}
-
-	public void TrackEvent(string eventName, Dictionary<string, object> eventParams) {
+	
+	public void StoreEvent(string eventName, Dictionary<string, object> eventParams) {
 		AnalyticsEvent newEvent = new AnalyticsEvent(eventName, eventParams);
 		string json = JsonConvert.SerializeObject(newEvent);
 		File.WriteAllText(offlineStoragePath, json);
 		Debug.Log($"STORAGE: {offlineStoragePath}");
 	}
+
+	public void StoreEvent(AnalyticsEvent analyticsEvent) {			
+		_analysisDataDict[analyticsEvent.EventName] = analyticsEvent;
+		string json = JsonConvert.SerializeObject(_analysisDataDict);
+		File.WriteAllText(offlineStoragePath, json);
+		Debug.Log($"STORAGE: {offlineStoragePath}");
+	}
+
 }// AnalyticsManager class end.
 
