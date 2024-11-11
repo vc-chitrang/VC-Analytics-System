@@ -42,9 +42,13 @@ public class AnalyticsManager : MonoBehaviour {
 		Debug.Log($"STORAGE: {offlineStoragePath}");
 	}
 
-	public void StoreEvent(AnalyticsEvent analyticsEvent) {			
-		_analysisDataDict[analyticsEvent.EventName] = analyticsEvent;
-		string json = JsonConvert.SerializeObject(_analysisDataDict);
+	public void StoreEvent(AnalyticsEvent analyticsEvent) {
+		if (_analysisDataDict.ContainsKey(analyticsEvent.EventName)) {
+			_analysisDataDict[analyticsEvent.EventName] = analyticsEvent;
+		} else {
+			_analysisDataDict.Add(analyticsEvent.EventName, analyticsEvent);
+		}
+		string json = JsonConvert.SerializeObject(_analysisDataDict.Values);
 		File.WriteAllText(offlineStoragePath, json);
 		Debug.Log($"STORAGE: {offlineStoragePath}");
 	}

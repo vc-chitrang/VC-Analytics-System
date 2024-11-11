@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class Examples : MonoBehaviour {
 	void Start() {
-		AnalyticsEvent _analyticalData = new UserDemographicProfileTracker().Create();
-		AnalyticsManager.Instance.StoreEvent(_analyticalData);
+		AnalyticsManager.Instance.StoreEvent(new UserDemographicProfileTracker().Create());
+	}
+
+	public void OnCustomButtonClick() {
+		Debug.Log("OnCustomButtonClick");
 	}
 }

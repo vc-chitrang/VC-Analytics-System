@@ -1,4 +1,4 @@
-public interface ITracker {
+public interface ITrackerCustom {
 	public string EventName {
 		get;
 	}
