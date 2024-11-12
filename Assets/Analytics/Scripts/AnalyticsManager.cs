@@ -127,7 +127,7 @@ public class AnalyticsManager : MonoBehaviour {
 	public void StoreData() {
 		string json = JsonConvert.SerializeObject(_analysisDataDict.Values,Formatting.Indented);
 		File.WriteAllText(offlineStoragePath, json);
-		Debug.Log($"DATA Stored: {offlineStoragePath}");
+		Debug.Log($"DATA Stored: {offlineStoragePath}");	
 	}
 }// AnalyticsManager class end.
 
