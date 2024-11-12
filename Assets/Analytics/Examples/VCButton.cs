@@ -6,10 +6,10 @@ public class VCButton : Button {
 		_tracker = new UserInteractionTracker("Button_Click");
 		onClick.AddListener(() => {
 			string parameterKey = $"{this.gameObject.name}";
-			_tracker.Add(parameterKey,UnityEngine.Random.Range(0,100));
-			AnalyticsEvent _event = _tracker.Create();			
+			_tracker.AddButtonClickCount(parameterKey);
+			AnalyticsEvent _eventData = _tracker.Create();			
 
-			AnalyticsManager.Instance.AddOrUpdateParams(_event, parameterKey);
+			AnalyticsManager.Instance.AddOrUpdateParams(_eventData, parameterKey);
 			AnalyticsManager.Instance.StoreData();
 		});
 	}

@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class UserInteractionTracker : TrackerBase, ITracker {
 	private string _eventName;
 
@@ -22,6 +24,20 @@ public class UserInteractionTracker : TrackerBase, ITracker {
 			EventParams[key] = value;
 		} else {
 			EventParams.Add(key, value);
+		}
+	}
+
+	public void AddButtonClickCount(string key) {
+		if (EventParams.ContainsKey(key)) {
+			// Ensure the value is an integer before attempting to increment
+			if (EventParams[key] is int currentValue) {
+				EventParams[key] = currentValue + 1;
+			} else {
+				// Handle cases where the existing value isn't an integer
+				Debug.LogWarning($"Value for '{key}' is not an integer and cannot be incremented.");
+			}
+		} else {
+			EventParams.Add(key, 1);
 		}
 	}
 }//UserInteractionTracker class end.

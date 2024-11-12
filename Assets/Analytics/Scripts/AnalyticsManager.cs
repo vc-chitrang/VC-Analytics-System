@@ -79,23 +79,6 @@ public class AnalyticsManager : MonoBehaviour {
 			}
 		}
 	}
-	public void StoreEvent(string eventName, Dictionary<string, object> eventParams) {
-		AnalyticsEvent newEvent = new AnalyticsEvent(eventName, eventParams);
-		string json = JsonConvert.SerializeObject(newEvent);
-		File.WriteAllText(offlineStoragePath, json);
-		Debug.Log($"STORAGE: {offlineStoragePath}");
-	}
-
-	public void StoreEvent(AnalyticsEvent analyticsEvent) {
-		if (_analysisDataDict.ContainsKey(analyticsEvent.EventName)) {
-			_analysisDataDict[analyticsEvent.EventName] = analyticsEvent;
-		} else {
-			_analysisDataDict.Add(analyticsEvent.EventName, analyticsEvent);
-		}
-		string json = JsonConvert.SerializeObject(_analysisDataDict.Values);
-		File.WriteAllText(offlineStoragePath, json);
-		Debug.Log($"STORAGE: {offlineStoragePath}");
-	}
 
 	public void AddEventData(AnalyticsEvent eventData) {
 		if (_analysisDataDict.ContainsKey(eventData.EventName)) {		
@@ -115,6 +98,7 @@ public class AnalyticsManager : MonoBehaviour {
 			Dictionary<string, object> _parameters = _e.Parameters;
 
 			if (_parameters.ContainsKey(parameterKey)) {
+				//already contains value of the parameter so update existing event value.
 				_parameters[parameterKey] = eventData.Parameters[parameterKey];
 			} else {
 				_parameters.Add(parameterKey, eventData.Parameters[parameterKey]);
@@ -127,7 +111,6 @@ public class AnalyticsManager : MonoBehaviour {
 	public void StoreData() {
 		string json = JsonConvert.SerializeObject(_analysisDataDict.Values,Formatting.Indented);
 		File.WriteAllText(offlineStoragePath, json);
-		Debug.Log($"DATA Stored: {offlineStoragePath}");	
 	}
 }// AnalyticsManager class end.
 
