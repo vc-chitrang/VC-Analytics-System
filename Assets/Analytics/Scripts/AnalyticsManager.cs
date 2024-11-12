@@ -52,7 +52,7 @@ public class AnalyticsManager : MonoBehaviour {
 		AddEventData(new UserDemographicProfileTracker().Create());
 		StoreData();
 
-		DebugEvents(_analysisDataDict);
+		//DebugEvents(_analysisDataDict);
 	}
 
 	public Dictionary<string, AnalyticsEvent> DeserializeToDictionary(string json) {
@@ -106,6 +106,19 @@ public class AnalyticsManager : MonoBehaviour {
 		} else {
 			_analysisDataDict.Add(eventData.EventName, eventData);
 		}
+	}
+
+	public object GetParameterData(string eventNameKey, string parameterKey) {
+		// Check if the main dictionary contains the event name key
+		if (_analysisDataDict.ContainsKey(eventNameKey)) {
+			// Check if the Parameters dictionary within the event contains the parameter key
+			if (_analysisDataDict[eventNameKey].Parameters.ContainsKey(parameterKey)) {
+				return _analysisDataDict[eventNameKey].Parameters[parameterKey];
+			}
+		}
+
+		// Return null or an appropriate default value if keys are not found
+		return null; // or a default value as per your requirement
 	}
 
 	public void StoreData() {
