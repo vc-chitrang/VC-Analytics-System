@@ -117,7 +117,7 @@ public class AnalyticsManager : MonoBehaviour {
 			if (_parameters.ContainsKey(parameterKey)) {
 				_parameters[parameterKey] = eventData.Parameters[parameterKey];
 			} else {
-				_parameters.Add(parameterKey, eventData.Parameters.Values);
+				_parameters.Add(parameterKey, eventData.Parameters[parameterKey]);
 			}
 		} else {
 			_analysisDataDict.Add(eventData.EventName, eventData);
