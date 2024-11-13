@@ -2,7 +2,18 @@ using UnityEngine;
 using System;
 using System.Globalization;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
+[System.Serializable]
+public class ScreenTimeData {
+    public string Duration;
+    public int ViewCount;   
+
+    public ScreenTimeData() {
+        Duration = DateTime.MinValue.ToString();
+        ViewCount = 0;
+    }
+}
 //It is used to track the time a screen is viewed (int: count) and the total time spent on a screen (DateTime: "dd-MM-yyyy HH:mm:ss").
 public class ScreenUpTimeTracker : MonoBehaviour {
     private long startTime;
@@ -15,28 +26,30 @@ public class ScreenUpTimeTracker : MonoBehaviour {
         TrackSessionEnd(); 
     }
 
-    private void TrackSessionStart()
-    {
+    private void TrackSessionStart() {
         startTime = DateTime.Now.Ticks;
     }
 
-    private void TrackSessionEnd()
-    {
+    private void TrackSessionEnd() { 
         endTime = DateTime.Now.Ticks;
-        string dateString = (string)AnalyticsManager.Instance.GetParameterData("Screen_View", gameObject.name);
-        if(string.IsNullOrEmpty(dateString)) {
-            dateString = DateTime.MinValue.ToString();
-            Debug.Log(dateString);
+
+        object existingData = AnalyticsManager.Instance.GetParameterData("Screen_View", gameObject.name);        
+        ScreenTimeData screenTimeData = JsonConvert.DeserializeObject<ScreenTimeData>(JsonConvert.SerializeObject(existingData));
+
+        if(screenTimeData is null) {
+            screenTimeData = new ScreenTimeData();
         }
+
         long screenUpTimeDuration = endTime - startTime;     
-        DateTime logTime = DateTime.ParseExact(dateString, "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+        DateTime logTime = DateTime.ParseExact(screenTimeData.Duration, "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
 
         DateTime totalDuration = logTime.AddTicks(screenUpTimeDuration);
 
         UserInteractionTracker tracker = new UserInteractionTracker("Screen_View"); 
         AnalyticsEvent totalEventData = tracker.Create(new Dictionary<string, object>() {
-            { $"{gameObject.name}", totalDuration.ToString() }
+            { gameObject.name, new ScreenTimeData() { Duration = totalDuration.ToString(), ViewCount = screenTimeData.ViewCount + 1} },            
         });
+
         AnalyticsManager.Instance.AddOrUpdateParams(totalEventData, $"{gameObject.name}");                
         AnalyticsManager.Instance.StoreData();
     }
