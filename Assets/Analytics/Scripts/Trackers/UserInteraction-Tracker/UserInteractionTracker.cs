@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class UserInteractionTracker : TrackerBase, ITracker {
+public class UserInteractionTracker{
 	private string _eventName;
 
 	public string EventName {
@@ -15,12 +16,7 @@ public class UserInteractionTracker : TrackerBase, ITracker {
 		this.EventName = EventName;
 	}
 
-	public AnalyticsEvent Create() {
-		return new TrackerFactory().CreateTracker(EventName, EventParams);
-	}
-
-	public void AddButtonClickCount(string parameterKey, int clickCount) {
-		EventParams.Clear();
-		EventParams.Add(parameterKey, clickCount);		
+	public AnalyticsEvent Create(Dictionary<string, object> eventParams) {
+		return new TrackerFactory().CreateTracker(EventName, eventParams);
 	}
 }//UserInteractionTracker class end.
