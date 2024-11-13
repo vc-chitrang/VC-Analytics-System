@@ -6,7 +6,6 @@ public class VCButton : Button {
 	private UserInteractionTracker _tracker;
 	protected override void Awake() {
 		_tracker = new UserInteractionTracker("Button_Click");
-		UnityEngine.Debug.Log($"{name} : {_tracker.EventName}");
 		onClick.AddListener(() => {
 			string parameterKey = $"{this.gameObject.name}";
 			object data = AnalyticsManager.Instance.GetParameterData(_tracker.EventName, parameterKey);

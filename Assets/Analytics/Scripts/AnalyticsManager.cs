@@ -95,6 +95,7 @@ public class AnalyticsManager : MonoBehaviour {
 
 		if (_analysisDataDict.ContainsKey(eventData.EventName)) {
 			AnalyticsEvent _e = _analysisDataDict[eventData.EventName];
+			_e.Timestamp = eventData.Timestamp;
 			Dictionary<string, object> _parameters = _e.Parameters;
 
 			if (_parameters.ContainsKey(parameterKey)) {
