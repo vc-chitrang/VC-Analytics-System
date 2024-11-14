@@ -15,7 +15,7 @@ public class ScreenTimeData {
     }
 }
 //It is used to track the time a screen is viewed (int: count) and the total time spent on a screen (DateTime: "dd-MM-yyyy HH:mm:ss").
-public class ScreenUpTimeTracker : MonoBehaviour {
+public class VCScreenUpTimeTracker : MonoBehaviour {
     private long startTime;
     private long endTime;
     void OnEnable() {

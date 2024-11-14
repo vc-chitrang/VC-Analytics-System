@@ -50,8 +50,8 @@ public class AnalyticsManager : MonoBehaviour {
 		_analysisDataDict = retriveData;
 		
 		AddEventData(new UserDemographicProfileTracker().Create());
+		AddEventData(new DeviceandTechnicalInformationTracker().Create());
 		StoreData();
-
 		//DebugEvents(_analysisDataDict);
 	}
 
@@ -125,6 +125,7 @@ public class AnalyticsManager : MonoBehaviour {
 	public void StoreData() {
 		string json = JsonConvert.SerializeObject(_analysisDataDict.Values,Formatting.Indented);
 		File.WriteAllText(offlineStoragePath, json);
+		Debug.Log("Data Stored Successfully: " + offlineStoragePath);
 	}
 }// AnalyticsManager class end.
 

@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "ViitorCloud_Analytics.sln"
+    "dotnet.defaultSolution": "ViitorCloud_Analytics.sln",
+    "dotnet.preferCSharpExtension": true
 }

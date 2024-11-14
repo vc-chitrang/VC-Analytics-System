@@ -13,7 +13,7 @@ public class UserInteractionTracker{
 
 	//"EventName"/eventParams: Dictionary<string, object>	
 	//[done] "Button_Click"/eventParams: (key:"Play Button", value: 1)	
-	//[working] "Screen_View"/eventParams: (key:"Main Menu Screen", value: total Up Time in (DD:MM:YY hh:mm:ss))
+	//[done] "Screen_View"/eventParams: (key:"Main Menu Screen", value: total Up Time in (DD:MM:YY hh:mm:ss))
 	public UserInteractionTracker(string EventName) {
 		this.EventName = EventName;
 	}
