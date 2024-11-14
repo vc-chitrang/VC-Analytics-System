@@ -16,6 +16,9 @@ public class DeviceandTechnicalInformationTracker : TrackerBase, ITracker
         // Battery Level: If applicable, tracking battery could help analyze drop-offs. 
         eventParams.Add("Device Model", SystemInfo.deviceModel);
         eventParams.Add("Operating System", SystemInfo.operatingSystem);
+        eventParams.Add("DeviceName", SystemInfo.deviceName);
+        eventParams.Add("Company Name", Application.companyName);
+        eventParams.Add("Product Name", Application.productName);
         eventParams.Add("App Version", Application.version);
         eventParams.Add("Screen Resolution", Screen.width + "x" + Screen.height);
         eventParams.Add("Network Type", Application.internetReachability.ToString());
