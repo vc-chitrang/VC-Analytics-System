@@ -5,6 +5,7 @@ using UnityEngine;
 using Newtonsoft.Json;
 using System.Linq;
 using System.Threading.Tasks;
+using UnityEditor;
 
 [Serializable]
 public class AnalyticsEvent {
@@ -22,7 +23,7 @@ public class AnalyticsManager : MonoBehaviour {
 	private static AnalyticsManager _instance;
 	public static AnalyticsManager Instance => _instance;
 
-	private string offlineStoragePath { get => Path.Combine(Application.persistentDataPath, "AnalyticsData.json"); }
+	private string offlineStoragePath { get => Path.Combine(Application.dataPath,"Resources", "AnalyticsData.json"); }
 	private Dictionary<string,AnalyticsEvent> _analysisDataDict = new Dictionary<string, AnalyticsEvent>();
 
 	private async void Awake() {
@@ -40,9 +41,21 @@ public class AnalyticsManager : MonoBehaviour {
 	}
 
 	private async Task RetriveData(Action<Dictionary<string, AnalyticsEvent>> callback) {
-		string json = await File.ReadAllTextAsync(offlineStoragePath);
-		Dictionary<string,AnalyticsEvent> _retriveData = DeserializeToDictionary(json);
-		callback?.Invoke(_retriveData);
+		try {
+			// Create directory if it doesn't exist
+			string directory = Path.GetDirectoryName(offlineStoragePath);
+			if (!Directory.Exists(directory)) {
+				Directory.CreateDirectory(directory);
+			}
+
+			string json = await File.ReadAllTextAsync(offlineStoragePath);
+			Dictionary<string,AnalyticsEvent> _retriveData = DeserializeToDictionary(json);
+			callback?.Invoke(_retriveData);
+		}
+		catch (Exception ex) {
+			Debug.LogError($"Error retrieving analytics data: {ex.Message}");
+			callback?.Invoke(new Dictionary<string, AnalyticsEvent>());
+		}
 	}
 
 	private void OnDataRetrived(Dictionary<string, AnalyticsEvent> retriveData) {

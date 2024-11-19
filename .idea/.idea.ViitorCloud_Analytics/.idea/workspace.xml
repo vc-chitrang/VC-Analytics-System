@@ -1,14 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9f6f3688-f2bb-40e0-ad69-cc9ffd6044bd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Analytics/Examples/VCButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Analytics/Examples/VCButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Analytics/Scripts/Trackers/BaseClasses/TrackerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Analytics/Scripts/Trackers/BaseClasses/TrackerBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Analytics/Scripts/Trackers/Demographic-Tracker/UserDemographicProfileTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Analytics/Scripts/Trackers/Demographic-Tracker/UserDemographicProfileTracker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Analytics/Scripts/Trackers/UserInteraction-Tracker/UserInteractionTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Analytics/Scripts/Trackers/UserInteraction-Tracker/UserInteractionTracker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Examples/VCSessionData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Examples/VCSessionData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Bold SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Bold SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Bold.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-BoldItalic.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-ExtraBold SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-ExtraBold SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-ExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-ExtraBold.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-ExtraBoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-ExtraBoldItalic.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-ExtraLight.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-ExtraLight.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-ExtraLightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-ExtraLightItalic.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Heavy SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Heavy SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Heavy.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Heavy.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-HeavyItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-HeavyItalic.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Italic.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Light SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Light SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Light.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-LightItalic.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Medium SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Medium SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Medium.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-MediumItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-MediumItalic.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-Thin.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-ThinItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria-ThinItalic.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Fonts/Geometria/Geometria.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Scripts/Utiltiy.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Scripts/Utiltiy/JsonFileUploader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Analytics/Scripts/Utiltiy/JsonFileUploader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Temp.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Temp/AnalyticsData.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Temp/AnalyticsData.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ViitorCloud_Analytics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ViitorCloud_Analytics/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +70,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Analytics/Scripts/AnalyticsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Analytics/Scripts/Utiltiy/JsonDragDropUploader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Analytics/Scripts/Utiltiy/JsonFileUploader.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -27,15 +85,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/InitialBase",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.general",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/InitialBase&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.25f1\Editor\Unity.exe" />
@@ -58,6 +121,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -68,6 +134,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -84,6 +153,14 @@
       <updated>1731477055146</updated>
       <workItem from="1731477057665" duration="77000" />
       <workItem from="1731477388023" duration="146000" />
+      <workItem from="1731567296504" duration="210000" />
+      <workItem from="1731568041759" duration="746000" />
+      <workItem from="1731571346007" duration="82000" />
+      <workItem from="1731571589861" duration="434000" />
+      <workItem from="1731660953754" duration="372000" />
+      <workItem from="1731996035006" duration="1361000" />
+      <workItem from="1731997428525" duration="326000" />
+      <workItem from="1731997770363" duration="112000" />
     </task>
     <servers />
   </component>
