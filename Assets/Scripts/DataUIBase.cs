@@ -9,6 +9,7 @@ public class DataUIBase : MonoBehaviour
     {
         SetPanel(false);
     }
+
     public void SetPanel(bool isEnable)
     {
         panel.SetActive(isEnable);

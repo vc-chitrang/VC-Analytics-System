@@ -5,7 +5,6 @@ using UnityEngine;
 using Newtonsoft.Json;
 using System.Linq;
 using System.Threading.Tasks;
-using UnityEditor;
 
 [Serializable]
 public class AnalyticsEvent {
@@ -140,5 +139,6 @@ public class AnalyticsManager : MonoBehaviour {
 		File.WriteAllText(offlineStoragePath, json);
 		Debug.Log("Data Stored Successfully: " + offlineStoragePath);
 	}
+
 }// AnalyticsManager class end.
 

@@ -10,9 +10,9 @@ public class ReusableScrollPanel : MonoBehaviour
         foreach (var d in data)
         {
             TextElement _e = Instantiate(textElement, content);
-            string message = $"{d.Key.ToUpper()}: {d.Value}";
+            _e.name = d.Key;
+            string message = $"{d.Key.ToUpper()}: <b>{d.Value}</b>";
             _e.SetText(message);
-            Debug.Log(message);
         }
     }
 }

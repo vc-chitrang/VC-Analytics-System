@@ -1,43 +1,41 @@
-using System;
 using TMPro;
-using UnityEditor.MemoryProfiler;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SelectionButtonUI : MonoBehaviour
-{
-    public DataUIBase panel;
-    [HideInInspector] public string key;
-    private AnalyticsReader reader;
-    private AnalyticsEvent data;
-    [SerializeField] private Button button;
-    [SerializeField] private TextMeshProUGUI _buttonText;
-    void Awake()
-    {
-        if(button is null){
-            button = GetComponent<Button>();
-        }
-        button.onClick.RemoveAllListeners();
-        button.onClick.AddListener(OnClick);
+public class SelectionButtonUI : MonoBehaviour {
+	public DataUIBase panel;
+	[HideInInspector] public string key;
+	private AnalyticsReader reader;
+	private AnalyticsEvent data;
+	[SerializeField] private Button button;
+	[SerializeField] private TextMeshProUGUI _buttonText;
 
-        this.key = name.ToLower().Trim();
-        
-        string displayName = StringUtility.ReplaceUnderScoreAndDashWithSpace(name);
-        displayName = StringUtility.ConvertToTitleCase(displayName);
-        _buttonText.text = displayName; 
-    }
+	void Awake() {
+		if (button is null) {
+			button = GetComponent<Button>();
+		}
+		button.onClick.RemoveAllListeners();
+		button.onClick.AddListener(OnClick);
 
-    public void Init(AnalyticsReader reader, AnalyticsEvent data)
-    {
-        this.data = data;
-        this.reader = reader;
+		this.key = name.ToLower().Trim();
 
-        panel.Init(data);
-    }
+		string displayName = StringUtility.ReplaceUnderScoreAndDashWithSpace(name);
+		displayName = StringUtility.ConvertToTitleCase(displayName);
+		_buttonText.text = displayName;
+	}
 
-    private void OnClick()
-    {
-        reader.DisableAllPanels();
-        panel.SetPanel(true);
-    }
-}
+	public void Init(AnalyticsReader reader, AnalyticsEvent data) {
+		this.data = data;
+		this.reader = reader;
+
+		panel.Init(data);
+	}
+
+	private void OnClick() {
+		if (reader is null) {
+			return;
+		}
+		reader.DisableAllPanels();
+		panel.SetPanel(true);
+	}
+}//SelectionButtonUI class end.
