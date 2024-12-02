@@ -5,7 +5,7 @@
       "User Device ID": "bac50d8e0837f1497224da2bffe4ae457a8dbfd6",
       "Location": "Unknown"
     },
-    "Timestamp": "2024-11-19T12:27:55.2249127Z"
+    "Timestamp": "2024-12-02T09:58:13.5310529Z"
   },
   {
     "EventName": "Device-and-Technical-Information",
@@ -20,7 +20,7 @@
       "Network Type": "ReachableViaLocalAreaNetwork",
       "Battery Level": "Not Applicable"
     },
-    "Timestamp": "2024-11-19T12:27:55.2269231Z"
+    "Timestamp": "2024-12-02T09:58:13.5320614Z"
   },
   {
     "EventName": "SessionInformation",
@@ -28,36 +28,22 @@
       "a7cfc25f-1fe3-47ec-be09-7a7238f100b7": {
         "SessionId": "a7cfc25f-1fe3-47ec-be09-7a7238f100b7",
         "SessionDuration": "01-01-0001 00:00:03"
-      },
-      "41106339-983d-4e4d-84e1-0739e6757162": {
-        "SessionId": "41106339-983d-4e4d-84e1-0739e6757162",
-        "SessionDuration": "01-01-0001 00:00:00"
-      },
-      "1f9425be-0fa0-484e-8488-c5cd422261c9": {
-        "SessionId": "1f9425be-0fa0-484e-8488-c5cd422261c9",
-        "SessionDuration": "01-01-0001 00:00:28"
-      },
-      "9f004990-fced-45ec-ad11-82ed9c4c73ad": {
-        "SessionId": "9f004990-fced-45ec-ad11-82ed9c4c73ad",
-        "SessionDuration": "01-01-0001 00:00:33"
-      },
-      "3d1f716a-1242-4ab4-9caf-0df8dd1c093c": {
-        "SessionId": "3d1f716a-1242-4ab4-9caf-0df8dd1c093c",
-        "SessionDuration": "01-01-0001 00:00:34"
-      },
-      "9a422a7d-1531-4ff4-8876-da3096e2862c": {
-        "SessionId": "9a422a7d-1531-4ff4-8876-da3096e2862c",
-        "SessionDuration": "01-01-0001 00:00:00"
-      },
-      "e0ecc65e-afe4-47ba-b802-4e549c725881": {
-        "SessionId": "e0ecc65e-afe4-47ba-b802-4e549c725881",
-        "SessionDuration": "01-01-0001 00:00:10"
-      },
-      "218f1522-45f7-429d-951f-a9eaf59568a3": {
-        "SessionId": "218f1522-45f7-429d-951f-a9eaf59568a3",
-        "SessionDuration": "01-01-0001 00:00:01"
       }
     },
-    "Timestamp": "2024-11-19T12:28:55.9407618Z"
+    "Timestamp": "2024-12-02T09:58:42.8221847Z"
+  },
+  {
+    "EventName": "Screen_View",
+    "Parameters": {
+      "FailScreen": {
+        "Duration": "01-01-0001 00:25:51",
+        "ViewCount": 30
+      },
+      "GameScreen": {
+        "Duration": "01-01-0001 00:25:51",
+        "ViewCount": 30
+      }
+    },
+    "Timestamp": "2024-12-02T09:58:42.8499852Z"
   }
 ]
