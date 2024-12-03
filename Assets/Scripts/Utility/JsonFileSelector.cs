@@ -1,9 +1,10 @@
 using UnityEngine;
-using SimpleFileBrowser; // Namespace for SimpleFileBrowser
+using SimpleFileBrowser;
+using System; // Namespace for SimpleFileBrowser
 
 public class JsonFileSelector:MonoBehaviour {
-	
-	[ContextMenu("BrowseJsonFile")]
+	public static Action<string> onJsonContentLoaded = null;
+
 	public void BrowseJsonFile() {
 		// Show the file browser
 		FileBrowser.SetFilters(true,new FileBrowser.Filter("JSON Files",".json"));
@@ -27,5 +28,6 @@ public class JsonFileSelector:MonoBehaviour {
 		// Example: Read and print the content of the selected JSON file
 		string jsonContent = System.IO.File.ReadAllText(filePath);
 		Debug.Log("JSON Content: " + jsonContent);
+		onJsonContentLoaded?.Invoke(jsonContent);
 	}
-}
+}//JsonFileSelector class end.
