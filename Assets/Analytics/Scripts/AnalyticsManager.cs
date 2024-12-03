@@ -63,7 +63,7 @@ public class AnalyticsManager : MonoBehaviour {
 		
 		AddEventData(new UserDemographicProfileTracker().Create());
 		AddEventData(new DeviceandTechnicalInformationTracker().Create());
-		StoreData();
+		//StoreData();
 		//DebugEvents(_analysisDataDict);
 	}
 

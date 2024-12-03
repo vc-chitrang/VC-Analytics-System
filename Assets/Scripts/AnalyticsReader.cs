@@ -1,11 +1,17 @@
 using System.IO;
 using UnityEngine;
-using System.Threading.Tasks;
 using System;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using TMPro;
 
 public class AnalyticsReader : MonoBehaviour {
+
+	[Header("UI")]
+	[SerializeField] private TextMeshProUGUI _title;
+	[SerializeField] private GameObject _browseFileScreen;
+
+	[Header("-----------------------")]
 	[SerializeField] private List<SelectionButtonUI> options;
 	private List<AnalyticsEvent> analyticsEvents = new List<AnalyticsEvent>();
 
@@ -14,24 +20,32 @@ public class AnalyticsReader : MonoBehaviour {
 	}
 
 	private async void Awake() {
-		await RetriveData(OnDataRetrived);
+		_title.text = $"{Application.companyName} Data Analytics Tool";
+		_browseFileScreen.SetActive(true);
+#if UNITY_EDITOR_WIN
+		if (File.Exists(offlineStoragePath)) {
+			string jsonData = await File.ReadAllTextAsync(offlineStoragePath);
+			OnDataRetrived(jsonData);
+			_browseFileScreen.SetActive(false);
+		}
+#endif
 	}
 
-	private async Task RetriveData(Action<string> callback) {
-		try {
-			if (File.Exists(offlineStoragePath)) {
-				string jsonData = await File.ReadAllTextAsync(offlineStoragePath);
-				callback?.Invoke(jsonData);
-			} else {
-				Debug.LogWarning($"Analytics data file not found at: {offlineStoragePath}");
-				callback?.Invoke(null);
-				//TODO: Display Fail Popup
-			}
-		} catch (Exception ex) {
-			Debug.LogError($"Error reading analytics data: {ex.Message}");
-			callback?.Invoke(null);
-			//TODO: Display Fail Popup
-		}
+	private void OnEnable() {
+#if !UNITY_EDITOR_WIN
+		JsonFileSelector.onJsonContentLoaded = OnJsonContentLoaded;
+#endif
+	}
+
+	private void OnDisable() {
+#if !UNITY_EDITOR_WIN
+		JsonFileSelector.onJsonContentLoaded -= OnJsonContentLoaded;
+#endif
+	}
+
+	private void OnJsonContentLoaded(string jsonData) {
+		OnDataRetrived(jsonData);
+		_browseFileScreen.SetActive(false);
 	}
 
 	private void OnDataRetrived(string jsonData) {
