@@ -4,8 +4,11 @@ using System.Threading.Tasks;
 using System;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using TMPro;
 
 public class AnalyticsReader : MonoBehaviour {
+	[SerializeField] private TextMeshProUGUI _title;
+
 	[SerializeField] private List<SelectionButtonUI> options;
 	private List<AnalyticsEvent> analyticsEvents = new List<AnalyticsEvent>();
 
@@ -14,6 +17,7 @@ public class AnalyticsReader : MonoBehaviour {
 	}
 
 	private async void Awake() {
+		_title.text = $"{Application.companyName} Data Analytics Tool";
 		await RetriveData(OnDataRetrived);
 	}
 
