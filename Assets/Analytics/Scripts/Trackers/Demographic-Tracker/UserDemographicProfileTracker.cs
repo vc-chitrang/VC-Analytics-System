@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UserDemographicProfileTracker :TrackerBase, ITracker {
-	public string EventName => "User-Demographic-Profile";
+	public string EventName => Constant.USER_DEMOGRAPHIC_PROFILE_CONST;
 
 	public AnalyticsEvent Create() {
 		//User ID: Unique identifier for each user. 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DeviceandTechnicalInformationTracker : TrackerBase, ITracker
 {
-    public string EventName => "Device-and-Technical-Information";
+    public string EventName => Constant.DEVICE_INFO_CONST;
 
     public AnalyticsEvent Create()
     {

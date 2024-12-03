@@ -55,10 +55,10 @@ public class VCSessionData: MonoBehaviour {
         DateTime logTime = DateTime.ParseExact(sessionInformation.SessionDuration, "dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
 
         DateTime totalDuration = logTime.AddTicks(screenUpTimeDuration);
-//if totalDuration is less then 5min then 
+        //if totalDuration is less then 5min then 
         sessionInformation.SessionDuration = totalDuration.ToString();
 
-        UserInteractionTracker tracker = new UserInteractionTracker("SessionInformation"); 
+        UserInteractionTracker tracker = new UserInteractionTracker(Constant.SESSION_INFO_CONST); 
         AnalyticsEvent totalEventData = tracker.Create(new Dictionary<string, object>() {
             { sessionInformation.SessionId, sessionInformation },            
         });
