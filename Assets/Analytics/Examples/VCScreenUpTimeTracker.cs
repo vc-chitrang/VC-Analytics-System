@@ -14,6 +14,7 @@ public class ScreenTimeData {
         ViewCount = 0;
     }
 }
+
 //It is used to track the time a screen is viewed (int: count) and the total time spent on a screen (DateTime: "dd-MM-yyyy HH:mm:ss").
 public class VCScreenUpTimeTracker : MonoBehaviour {
     private long startTime;
@@ -33,7 +34,8 @@ public class VCScreenUpTimeTracker : MonoBehaviour {
     private void TrackSessionEnd() { 
         endTime = DateTime.Now.Ticks;
 
-        object existingData = AnalyticsManager.Instance.GetParameterData("Screen_View", gameObject.name);        
+        object existingData = AnalyticsManager.Instance.GetParameterData(Constant.SCREEN_VIEW_CONST, gameObject.name);
+        Debug.Log(existingData);
         ScreenTimeData screenTimeData = JsonConvert.DeserializeObject<ScreenTimeData>(JsonConvert.SerializeObject(existingData));
 
         if(screenTimeData is null) {
@@ -45,12 +47,12 @@ public class VCScreenUpTimeTracker : MonoBehaviour {
 
         DateTime totalDuration = logTime.AddTicks(screenUpTimeDuration);
 
-        UserInteractionTracker tracker = new UserInteractionTracker("Screen_View"); 
+        UserInteractionTracker tracker = new UserInteractionTracker(Constant.SCREEN_VIEW_CONST); 
         AnalyticsEvent totalEventData = tracker.Create(new Dictionary<string, object>() {
-            { gameObject.name, new ScreenTimeData() { Duration = totalDuration.ToString(), ViewCount = screenTimeData.ViewCount + 1} },            
+            { gameObject.name, new ScreenTimeData() { Duration = totalDuration.ToString(), ViewCount = screenTimeData.ViewCount + 1} },
         });
 
-        AnalyticsManager.Instance.AddOrUpdateParams(totalEventData, $"{gameObject.name}");                
+        AnalyticsManager.Instance.AddOrUpdateParams(totalEventData, $"{gameObject.name}");
         AnalyticsManager.Instance.StoreData();
     }
 }//ScreenUpTimeTracker class end.

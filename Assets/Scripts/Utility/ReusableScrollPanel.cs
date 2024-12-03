@@ -4,6 +4,8 @@ using UnityEngine;
 public class ReusableScrollPanel:MonoBehaviour {
 	[SerializeField] private TextElement textElement;
 	[SerializeField] private RectTransform content;
+
+
 	public void Display(Dictionary<string,object> data) {
 		foreach (var d in data) {
 			TextElement _e = Instantiate(textElement,content);
@@ -11,5 +13,10 @@ public class ReusableScrollPanel:MonoBehaviour {
 			string message = $"{d.Key.ToUpper()}: <b>{d.Value}</b>";
 			_e.SetText(message);
 		}
+	}
+
+	public void Display(string message) {
+		TextElement _e = Instantiate(textElement,content);				
+		_e.SetText(message);
 	}
 }//ReusableScrollPanel class end.
