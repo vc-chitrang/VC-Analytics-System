@@ -9,6 +9,7 @@ public class AnalyticsReader : MonoBehaviour {
 
 	[Header("UI")]
 	[SerializeField] private TextMeshProUGUI _title;
+	[SerializeField] private TextMeshProUGUI _appVersion;
 	[SerializeField] private GameObject _browseFileScreen;
 
 	[Header("-----------------------")]
@@ -21,8 +22,10 @@ public class AnalyticsReader : MonoBehaviour {
 
 	private async void Awake() {
 		_title.text = $"{Application.companyName} Data Analytics Tool";
+		_appVersion.text = $"{Application.productName}_v{Application.version}";
+
 		_browseFileScreen.SetActive(true);
-#if UNITY_EDITOR_WIN
+#if !UNITY_EDITOR_WIN
 		if (File.Exists(offlineStoragePath)) {
 			string jsonData = await File.ReadAllTextAsync(offlineStoragePath);
 			OnDataRetrived(jsonData);
@@ -32,13 +35,13 @@ public class AnalyticsReader : MonoBehaviour {
 	}
 
 	private void OnEnable() {
-#if !UNITY_EDITOR_WIN
+#if UNITY_EDITOR_WIN
 		JsonFileSelector.onJsonContentLoaded = OnJsonContentLoaded;
 #endif
 	}
 
 	private void OnDisable() {
-#if !UNITY_EDITOR_WIN
+#if UNITY_EDITOR_WIN
 		JsonFileSelector.onJsonContentLoaded -= OnJsonContentLoaded;
 #endif
 	}

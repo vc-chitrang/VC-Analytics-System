@@ -1,0 +1,43 @@
+[
+  {
+    "EventName": "User-Demographic-Profile",
+    "Parameters": {
+      "User Device ID": "bac50d8e0837f1497224da2bffe4ae457a8dbfd6",
+      "Location": "Unknown"
+    },
+    "Timestamp": "2024-12-04T08:53:40.2851027Z"
+  },
+  {
+    "EventName": "Device-and-Technical-Information",
+    "Parameters": {
+      "Device Model": "MS-7C95 (Micro-Star International Co., Ltd.)",
+      "Operating System": "Windows 11  (10.0.22635) 64bit",
+      "DeviceName": "VC-CHITRANG",
+      "Company Name": "Viitor Cloud",
+      "Product Name": "Analytics Tool",
+      "App Version": "1.0",
+      "Screen Resolution": "1920x1080",
+      "Network Type": "ReachableViaLocalAreaNetwork",
+      "Battery Level": "Not Applicable"
+    },
+    "Timestamp": "2024-12-04T08:53:40.2866077Z"
+  },
+  {
+    "EventName": "Session-Information",
+    "Parameters": {
+      "7e96e264-7ff3-4cb0-8569-2f15cf415a9b": {
+        "SessionId": "7e96e264-7ff3-4cb0-8569-2f15cf415a9b",
+        "SessionDuration": "01-01-0001 00:00:35"
+      },
+      "2e18f599-0d07-4740-960c-5b18f625732f": {
+        "SessionId": "2e18f599-0d07-4740-960c-5b18f625732f",
+        "SessionDuration": "01-01-0001 00:00:00"
+      },
+      "950df3a2-5960-4eed-93ae-16623be14c1c": {
+        "SessionId": "950df3a2-5960-4eed-93ae-16623be14c1c",
+        "SessionDuration": "01-01-0001 00:00:12"
+      }
+    },
+    "Timestamp": "2024-12-04T08:53:52.361552Z"
+  }
+]
