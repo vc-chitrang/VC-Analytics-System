@@ -51,8 +51,6 @@ public class AnalyticsReader : MonoBehaviour {
 
 	private void OnJsonContentLoaded(string jsonData) {
 		OnDataRetrived(jsonData);
-		_browseFileScreen.SetActive(false);
-		_selectAnotherFileButton.SetActive(!_browseFileScreen.activeSelf);
 	}
 
 	private void OnDataRetrived(string jsonData) {
@@ -65,6 +63,8 @@ public class AnalyticsReader : MonoBehaviour {
 		analyticsEvents = JsonConvert.DeserializeObject<List<AnalyticsEvent>>(jsonData);
 
 		InitializeContentUI();
+		_browseFileScreen.SetActive(false);
+		_selectAnotherFileButton.SetActive(!_browseFileScreen.activeSelf);
 	}
 
 	private void InitializeContentUI() {
