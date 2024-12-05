@@ -5,14 +5,14 @@
       "User Device ID": "bac50d8e0837f1497224da2bffe4ae457a8dbfd6",
       "Location": "Unknown"
     },
-    "Timestamp": "2024-12-04T08:53:40.2851027Z"
+    "Timestamp": "2024-12-05T07:09:28.961914Z"
   },
   {
     "EventName": "Device-and-Technical-Information",
     "Parameters": {
       "Device Model": "MS-7C95 (Micro-Star International Co., Ltd.)",
       "Operating System": "Windows 11  (10.0.22635) 64bit",
-      "DeviceName": "VC-CHITRANG",
+      "Device Name": "VC-CHITRANG",
       "Company Name": "Viitor Cloud",
       "Product Name": "Analytics Tool",
       "App Version": "1.0",
@@ -20,24 +20,82 @@
       "Network Type": "ReachableViaLocalAreaNetwork",
       "Battery Level": "Not Applicable"
     },
-    "Timestamp": "2024-12-04T08:53:40.2866077Z"
+    "Timestamp": "2024-12-05T07:09:28.9629156Z"
+  },
+  {
+    "EventName": "Button-Click",
+    "Parameters": {
+      "Play Button": 2,
+      "Ads Button": 7
+    },
+    "Timestamp": "2024-12-05T06:39:37.4797212Z"
   },
   {
     "EventName": "Session-Information",
     "Parameters": {
-      "7e96e264-7ff3-4cb0-8569-2f15cf415a9b": {
-        "SessionId": "7e96e264-7ff3-4cb0-8569-2f15cf415a9b",
-        "SessionDuration": "01-01-0001 00:00:35"
+      "add44791-ad55-44e8-9ebb-facbb8a23bd2": {
+        "SessionId": "add44791-ad55-44e8-9ebb-facbb8a23bd2",
+        "SessionDuration": "01-01-0001 00:00:09"
       },
-      "2e18f599-0d07-4740-960c-5b18f625732f": {
-        "SessionId": "2e18f599-0d07-4740-960c-5b18f625732f",
-        "SessionDuration": "01-01-0001 00:00:00"
+      "e035bd14-66ff-4799-9539-9ecceee08059": {
+        "SessionId": "e035bd14-66ff-4799-9539-9ecceee08059",
+        "SessionDuration": "01-01-0001 00:00:18"
       },
-      "950df3a2-5960-4eed-93ae-16623be14c1c": {
-        "SessionId": "950df3a2-5960-4eed-93ae-16623be14c1c",
-        "SessionDuration": "01-01-0001 00:00:12"
+      "e48e334f-6e84-478a-98a9-22975e52c876": {
+        "SessionId": "e48e334f-6e84-478a-98a9-22975e52c876",
+        "SessionDuration": "01-01-0001 00:00:33"
+      },
+      "336b1c38-7e4d-4a5b-a485-ab8656b37543": {
+        "SessionId": "336b1c38-7e4d-4a5b-a485-ab8656b37543",
+        "SessionDuration": "01-01-0001 00:00:07"
+      },
+      "8d76a21f-54f1-4230-8991-666d296441fa": {
+        "SessionId": "8d76a21f-54f1-4230-8991-666d296441fa",
+        "SessionDuration": "01-01-0001 00:00:15"
+      },
+      "7777b1a6-b3d8-4c75-b165-de2627e668b9": {
+        "SessionId": "7777b1a6-b3d8-4c75-b165-de2627e668b9",
+        "SessionDuration": "01-01-0001 00:00:29"
+      },
+      "d2fc5f86-5c8e-432b-861f-b46e1da6d9fd": {
+        "SessionId": "d2fc5f86-5c8e-432b-861f-b46e1da6d9fd",
+        "SessionDuration": "01-01-0001 00:00:06"
+      },
+      "8f5c805c-5b92-4c7d-9b6d-c03a40afd7b4": {
+        "SessionId": "8f5c805c-5b92-4c7d-9b6d-c03a40afd7b4",
+        "SessionDuration": "01-01-0001 00:00:26"
+      },
+      "4ab3c1e7-e342-4f7d-a140-8e2dde713dfc": {
+        "SessionId": "4ab3c1e7-e342-4f7d-a140-8e2dde713dfc",
+        "SessionDuration": "01-01-0001 00:00:10"
+      },
+      "b0788a16-717a-46fc-b599-d8c08ea669ae": {
+        "SessionId": "b0788a16-717a-46fc-b599-d8c08ea669ae",
+        "SessionDuration": "01-01-0001 00:00:02"
+      },
+      "7950549b-672e-47ea-a91b-0f913eff916b": {
+        "SessionId": "7950549b-672e-47ea-a91b-0f913eff916b",
+        "SessionDuration": "01-01-0001 00:00:05"
+      },
+      "e62904d5-c031-4309-869f-950a861372a0": {
+        "SessionId": "e62904d5-c031-4309-869f-950a861372a0",
+        "SessionDuration": "01-01-0001 00:00:14"
       }
     },
-    "Timestamp": "2024-12-04T08:53:52.361552Z"
+    "Timestamp": "2024-12-05T07:09:42.900543Z"
+  },
+  {
+    "EventName": "Screen-View",
+    "Parameters": {
+      "GameScreen": {
+        "Duration": "01-01-0001 00:01:59",
+        "ViewCount": 8
+      },
+      "FailScreen": {
+        "Duration": "01-01-0001 00:02:01",
+        "ViewCount": 9
+      }
+    },
+    "Timestamp": "2024-12-05T07:09:42.9296894Z"
   }
 ]
