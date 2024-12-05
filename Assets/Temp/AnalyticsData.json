@@ -1,0 +1,66 @@
+[
+  {
+    "EventName": "User-Demographic-Profile",
+    "Parameters": {
+      "User Device ID": "bac50d8e0837f1497224da2bffe4ae457a8dbfd6",
+      "Location": "Unknown"
+    },
+    "Timestamp": "2024-11-18T05:42:02.6240186Z"
+  },
+  {
+    "EventName": "Button_Click",
+    "Parameters": {
+      "Play Button": 41,
+      "Exit Button": 16,
+      "Ads Button": 16
+    },
+    "Timestamp": "2024-11-14T05:36:03.7989243Z"
+  },
+  {
+    "EventName": "Screen_View",
+    "Parameters": {
+      "GameScreen": {
+        "Duration": "01-01-0001 00:00:21",
+        "ViewCount": 5
+      },
+      "FailScreen": {
+        "Duration": "01-01-0001 00:00:12",
+        "ViewCount": 3
+      }
+    },
+    "Timestamp": "2024-11-13T10:40:45.8756582Z"
+  },
+  {
+    "EventName": "Device-and-Technical-Information",
+    "Parameters": {
+      "Device Model": "MS-7C95 (Micro-Star International Co., Ltd.)",
+      "Operating System": "Windows 11  (10.0.22635) 64bit",
+      "DeviceName": "VC-CHITRANG",
+      "Company Name": "DefaultCompany",
+      "Product Name": "ViitorCloud_Analytics",
+      "App Version": "1.0",
+      "Screen Resolution": "1920x1080",
+      "Network Type": "ReachableViaLocalAreaNetwork",
+      "Battery Level": "Not Applicable"
+    },
+    "Timestamp": "2024-11-18T05:42:02.6260273Z"
+  },
+  {
+    "EventName": "SessionInformation",
+    "Parameters": {
+      "88f7594a-85b3-41ec-9e0f-39b5e10ad3cb": {
+        "SessionId": "88f7594a-85b3-41ec-9e0f-39b5e10ad3cb",
+        "SessionDuration": "01-01-0001 00:00:03"
+      },
+      "7ae76035-665e-4804-a0fa-fadb58d12f85": {
+        "SessionId": "7ae76035-665e-4804-a0fa-fadb58d12f85",
+        "SessionDuration": "01-01-0001 00:00:00"
+      },
+      "903a667a-796d-4ea4-ae79-e4a3a17680f5": {
+        "SessionId": "903a667a-796d-4ea4-ae79-e4a3a17680f5",
+        "SessionDuration": "01-01-0001 00:00:11"
+      }
+    },
+    "Timestamp": "2024-11-18T05:42:14.5358144Z"
+  }
+]
