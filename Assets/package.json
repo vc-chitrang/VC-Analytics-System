@@ -1,0 +1,13 @@
+{
+  "name": "com.viitorcloud.analyticstool",
+  "displayName": "Analytics Tool",
+  "version": "1.0",
+  "unity": "6000.0.25f1",
+  "author": "Vittorcloud Technologies",
+  "description": "Checkout Readme file",
+  "dependencies": {
+  },
+  "keywords": [ "analytics", "ViitorCloud" ],
+  "repository": {
+  }
+}
