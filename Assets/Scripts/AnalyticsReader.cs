@@ -1,4 +1,3 @@
-using System.IO;
 using UnityEngine;
 using System;
 using Newtonsoft.Json;
@@ -10,26 +9,19 @@ public class AnalyticsReader : MonoBehaviour {
 	[Header("UI")]
 	[SerializeField] private TextMeshProUGUI _title;
 	[SerializeField] private TextMeshProUGUI _appVersion;
-	[SerializeField] private GameObject _browseFileScreen;
 
 	[Header("-----------------------")]
 	[SerializeField] private List<SelectionButtonUI> options;
 	private List<AnalyticsEvent> analyticsEvents = new List<AnalyticsEvent>();
 
-	private string offlineStoragePath {
-		get => Path.Combine(Application.dataPath, "Resources", "AnalyticsData.json");
-	}
-
 	private async void Awake() {
 		_title.text = $"{Application.companyName} Data Analytics Tool";
 		_appVersion.text = $"{Application.productName}_v{Application.version}";
 
-		_browseFileScreen.SetActive(true);
 #if !UNITY_EDITOR_WIN
 		if (File.Exists(offlineStoragePath)) {
 			string jsonData = await File.ReadAllTextAsync(offlineStoragePath);
 			OnDataRetrived(jsonData);
-			_browseFileScreen.SetActive(false);
 		}
 #endif
 	}
@@ -48,7 +40,6 @@ public class AnalyticsReader : MonoBehaviour {
 
 	private void OnJsonContentLoaded(string jsonData) {
 		OnDataRetrived(jsonData);
-		_browseFileScreen.SetActive(false);
 	}
 
 	private void OnDataRetrived(string jsonData) {
