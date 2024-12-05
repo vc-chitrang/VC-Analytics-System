@@ -5,7 +5,7 @@
       "User Device ID": "bac50d8e0837f1497224da2bffe4ae457a8dbfd6",
       "Location": "Unknown"
     },
-    "Timestamp": "2024-12-05T06:54:37.0375662Z"
+    "Timestamp": "2024-12-05T07:09:28.961914Z"
   },
   {
     "EventName": "Device-and-Technical-Information",
@@ -20,7 +20,7 @@
       "Network Type": "ReachableViaLocalAreaNetwork",
       "Battery Level": "Not Applicable"
     },
-    "Timestamp": "2024-12-05T06:54:37.0385669Z"
+    "Timestamp": "2024-12-05T07:09:28.9629156Z"
   },
   {
     "EventName": "Button-Click",
@@ -64,22 +64,38 @@
       "8f5c805c-5b92-4c7d-9b6d-c03a40afd7b4": {
         "SessionId": "8f5c805c-5b92-4c7d-9b6d-c03a40afd7b4",
         "SessionDuration": "01-01-0001 00:00:26"
+      },
+      "4ab3c1e7-e342-4f7d-a140-8e2dde713dfc": {
+        "SessionId": "4ab3c1e7-e342-4f7d-a140-8e2dde713dfc",
+        "SessionDuration": "01-01-0001 00:00:10"
+      },
+      "b0788a16-717a-46fc-b599-d8c08ea669ae": {
+        "SessionId": "b0788a16-717a-46fc-b599-d8c08ea669ae",
+        "SessionDuration": "01-01-0001 00:00:02"
+      },
+      "7950549b-672e-47ea-a91b-0f913eff916b": {
+        "SessionId": "7950549b-672e-47ea-a91b-0f913eff916b",
+        "SessionDuration": "01-01-0001 00:00:05"
+      },
+      "e62904d5-c031-4309-869f-950a861372a0": {
+        "SessionId": "e62904d5-c031-4309-869f-950a861372a0",
+        "SessionDuration": "01-01-0001 00:00:14"
       }
     },
-    "Timestamp": "2024-12-05T06:55:02.9431207Z"
+    "Timestamp": "2024-12-05T07:09:42.900543Z"
   },
   {
     "EventName": "Screen-View",
     "Parameters": {
       "GameScreen": {
-        "Duration": "01-01-0001 00:01:25",
-        "ViewCount": 4
+        "Duration": "01-01-0001 00:01:59",
+        "ViewCount": 8
       },
       "FailScreen": {
-        "Duration": "01-01-0001 00:01:27",
-        "ViewCount": 5
+        "Duration": "01-01-0001 00:02:01",
+        "ViewCount": 9
       }
     },
-    "Timestamp": "2024-12-05T06:55:02.9717894Z"
+    "Timestamp": "2024-12-05T07:09:42.9296894Z"
   }
 ]
