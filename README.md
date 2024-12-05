@@ -1,30 +1,7 @@
-# ViitorCloud Analytics
-
-## Project Overview
-ViitorCloud Analytics is a Unity-based application designed to provide comprehensive analytics and data visualization tools. The application is structured to facilitate easy integration of various analytics features, making it suitable for developers looking to implement data tracking and reporting in their projects.
-
-## Features
-- **Event Tracking**: Log custom events with dynamic data.
-- **Screen Tracking**: Track user navigation between screens.
-- **User Engagement Metrics**: Track user sessions and engagement duration.
-- **Offline Data Storage**: Save data locally and sync when online.
-- **Modular Architecture**: Extendable using patterns like Singleton, Factory, and Strategy.
-
-## Design Patterns Used
-- **Singleton**: Ensures a single instance of the analytics manager.
-- **Observer**: Decouples event generation from event handling.
-- **Factory**: Creates different types of analytics events.
-- **Command**: Encapsulates tracking actions for batching.
-- **Strategy**: Chooses storage methods based on connectivity.
-- **Decorator**: Adds optional data processing like encryption.
-
-## Installation
-1. Clone the repository to your Unity project:
-   ```bash
-   git clone https://github.com/your-username/Unity-Custom-Analytics-System.git
-   ```
+# How to Use ViitorCloud Analytics Unity Package
 
 ## Integration Steps
+
 1. **Import the Package**:
    - Ensure that the `ViitorCloud Analytics` package is imported into your Unity project.
 
@@ -38,6 +15,7 @@ ViitorCloud Analytics is a Unity-based application designed to provide comprehen
    - Call the appropriate methods in your game logic to send tracking data to the `AnalyticsManager`.
 
 ## Additional Features
+
 ### Using VCButton for Tracking Button Clicks
 - Instead of using the standard Unity UI Button, you can use the `VCButton` script to track button click counts.
 - Attach the `VCButton` script to your button GameObject and configure it in the Inspector to start tracking clicks.
